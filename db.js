@@ -3,9 +3,9 @@ const { Sequelize, DataTypes } = require("sequelize");
 // 从环境变量中读取数据库配置
 const { MYSQL_USERNAME, MYSQL_PASSWORD, MYSQL_ADDRESS = "" } = process.env;
 
-const [host, port] = MYSQL_ADDRESS.split(":");
+const [host, port] = "sh-cynosdbmysql-grp-g1xoq83g.sql.tencentcdb.com:20249".split(":");
 
-const sequelize = new Sequelize("nodejs_demo", MYSQL_USERNAME, MYSQL_PASSWORD, {
+const sequelize = new Sequelize("nodejs_demo", "root", "sJ123456", {
   host,
   port,
   dialect: "mysql" /* one of 'mysql' | 'mariadb' | 'postgres' | 'mssql' */,
